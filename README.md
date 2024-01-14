@@ -1,7 +1,7 @@
 # fast-api-podman
-This repository is to test the usability of fast-api framework work podman.
+This repository is to practice initial startup of fast-api framework and podman.
 
-This project was done on a windows 11 OS using 
+See # Environment at bottom of document to see system definition used for this project.
 
 # Steps Taken
 
@@ -56,7 +56,7 @@ They said to use nano. But I changed it to vim. #VIMgang.
 Edit configuration file to add list of usable registries
 
 
-## Create Fast API Image  - [FastAPI Docs](https://fastapi.tiangolo.com/deployment/docker/)
+## Create API Image  - [FastAPI Docs](https://fastapi.tiangolo.com/deployment/docker/)
 These steps were carried out in the API section of this repository and used podman instead of docker. so don't forget to
 ```Shell 
 cd api 
