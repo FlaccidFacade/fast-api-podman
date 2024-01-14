@@ -3,7 +3,7 @@ This repository is to practice initial startup of fast-api framework and podman.
 
 See # Environment at bottom of document to see system definition used for this project.
 
-# Steps Taken
+# Steps Taken In Repo
 
 ## Set up Podman
 
@@ -53,8 +53,8 @@ They said to use nano. But I changed it to vim. #VIMgang.
 
 ### Add Registries
 
-Edit configuration file to add list of usable registries
-
+Edit configuration file (/etc/containers/registries.conf) to add list of usable registries. Also, there are some different tags you can use to skirt some 'security'. For example:
+> unqualified-search-registries=["docker.io","localhost:5000"]
 
 ## Create API Image  - [FastAPI Docs](https://fastapi.tiangolo.com/deployment/docker/)
 These steps were carried out in the API section of this repository and used podman instead of docker. so don't forget to
@@ -62,17 +62,14 @@ These steps were carried out in the API section of this repository and used podm
 cd api 
 ```
 or just change the commands to use the correct path instaed of using argument <code>.</code>
-
-Build Image
 ```Shell
+# Build Image:
 podman build -t myimage .
 ```
-
-Run Image
 ```Shell
+# Run Image:
 podman run -d --name mycontainer -p 80:80 myimage
 ```
-
 # Environment
 ![OS Version Image](/README_ASSETS/OS.PNG)
 ![WSL Version Image](/README_ASSETS/wsl.PNG)
